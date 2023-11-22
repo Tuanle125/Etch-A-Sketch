@@ -11,10 +11,12 @@ function createBoard(pixel, obj){
             const point = document.createElement('div');
             point.classList.add('pixel');
 
-            point.addEventListener('mouseover', (e) => {
+            point.addEventListener('mouseover', () => {
                 if(isPress) point.style.background = 'black';
             });
-
+            point.addEventListener('click', () => {
+                point.style.background = 'black';
+            });
             row.append(point);
         }
         obj.append(row);
