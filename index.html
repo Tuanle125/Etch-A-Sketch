@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/button-55.css">
+    <link rel="stylesheet" href="./style/range-sliders.css">
+
     <script src="./script.js" defer></script>
+
 </head>
 <body>
     <div class="container">
         <div class="menu-container">
             <div class="title">Etch-a-sketch</div>
-            <button class="erase">Erase</button>
+            <input type="range" class="win10-thumb" min="0" max="100" value="25" step="5" />
+            <input type="range" min="0" max="100" value="40" step="5" />
+            <button class="button-55" role="button">Erase</button>
+            <button class="button-55" role="button">Clear</button>
         </div>
         <div class="content-container">
             <div class="board"></div>
