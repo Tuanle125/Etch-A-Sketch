@@ -1,8 +1,12 @@
 const board = document.querySelector('.board');
 
-createBoard(16, board);
+document.addEventListener("DOMContentLoaded",createBoard(16, board)); 
 
 let isPress = false;
+board.addEventListener('mousedown', () => {isPress = true; console.log(isPress);});
+board.addEventListener('mouseup', () => {isPress = false; console.log(isPress);});
+board.addEventListener('mouseover', (e) => {if(isPress) e.target.style.backgroundColor="black"});
+
 function createBoard(pixel, obj){
     for(let i = 0; i< pixel; i++){
         const row = document.createElement('div');
@@ -10,17 +14,8 @@ function createBoard(pixel, obj){
         for(let i = 0; i< pixel; i++){
             const point = document.createElement('div');
             point.classList.add('pixel');
-
-            point.addEventListener('mouseover', () => {
-                if(isPress) point.style.background = 'black';
-            });
-            point.addEventListener('click', () => {
-                point.style.background = 'black';
-            });
             row.append(point);
         }
         obj.append(row);
     }
-    obj.addEventListener('mousedown', () => {isPress = true;});
-        obj.addEventListener('mouseup', () => {isPress = false;});
 }
