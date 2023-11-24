@@ -20,19 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showSize.innerHTML = `${slider.value} x ${slider.value}`;
         createBoard(e.target.value, board);
     });
-    
 
-
-    //Erase And Clear Board Button
-    const eraseBtn = document.querySelector('#erase-btn');
-    const clearBtn = document.querySelector('#clear-btn');
-
-    eraseBtn.addEventListener('click', ()=>{
-
-    });
-    clearBtn.addEventListener('click',()=>{
-        createBoard(slider.value,board);
-    });
 }); 
 
 function createBoard(pixel, obj){
