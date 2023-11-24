@@ -1,0 +1,61 @@
+/*========================================*/
+/* Display Structure ====================*/
+body {
+    margin: 0;
+    height:100vh;
+    display: flex;
+}
+.container {
+    flex: 1;
+    display: flex;
+}
+.menu-container {
+    /* border: 1px solid red; */
+    width: 300px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.content-container {
+    /* border: 1px solid red; */
+    flex: 1;
+    display: flex;
+    padding: 30px;
+    padding-left: 40px;
+}
+/*==============================*/
+/* Menu Bar ====================*/
+.title {
+    /* border: 1px solid red; */
+    /* color: rgb(119, 34, 245); */
+    color: white;
+    background-color: rgb(37, 37, 37);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    padding: 40px 40px;
+    margin-bottom: 40px;
+}
+
+/*==============================*/
+/* Draw Bar ====================*/
+.board {
+    margin: auto;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    flex:1;
+}
+.pixel {
+    flex:1;
+    /* border: 1px solid red; */
+}
+
+
+
+
+
+
+
