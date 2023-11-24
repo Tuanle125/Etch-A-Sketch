@@ -16,10 +16,13 @@
     <div class="container">
         <div class="menu-container">
             <div class="title">Etch-a-sketch</div>
-            <input type="range" class="win10-thumb" min="0" max="100" value="25" step="5" />
-            <input type="range" min="0" max="100" value="40" step="5" />
-            <button class="button-55" role="button">Erase</button>
-            <button class="button-55" role="button">Clear</button>
+            <div class="menu">
+                <div id="show-size"></div>
+                <input id="board-size" type="range" class="win10-thumb" min="1" max="64" value="16" step="1" />
+                <!-- <input type="range" min="1" max="64" value="16" step="1" /> -->
+                <button id="erase-btn" class="button-55" role="button">Erase</button>
+                <button id="clear-btn" class="button-55" role="button">Clear</button>
+            </div>
         </div>
         <div class="content-container">
             <div class="board"></div>
