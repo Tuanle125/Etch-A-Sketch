@@ -1,12 +1,27 @@
 let isPress = false;
 
 document.addEventListener("DOMContentLoaded", () => {
+    //Erase And Clear Board Button
+    const eraseBtn = document.querySelector('#erase-btn');
+    const clearBtn = document.querySelector('#clear-btn');
+    let isEraseOn = false;
+    clearBtn.addEventListener('click',()=>{createBoard(slider.value,board);});
+    eraseBtn.addEventListener('click', (e)=>{
+        isEraseOn = !isEraseOn;
+        if(isEraseOn) e.target.classList.add("button-active");
+        else e.target.classList.remove("button-active");    
+    });
+
     // Draw When mousedown and move
     const board = document.querySelector('.board');
     board.addEventListener('mousedown', () => {isPress = true; console.log(isPress);});
     board.addEventListener('mouseup', () => {isPress = false; console.log(isPress);});
-    board.addEventListener('mouseover', (e) => {if(isPress) e.target.style.backgroundColor="black"});
-
+    board.addEventListener('mouseover', (e) => {
+        if(isPress) {
+            if(isEraseOn) e.target.style.backgroundColor="white";
+            else e.target.style.backgroundColor="black"
+        }
+    });
 
 
     //Range Slider to change board size
@@ -19,18 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     slider.addEventListener('input', (e) => {
         showSize.innerHTML = `${slider.value} x ${slider.value}`;
         createBoard(e.target.value, board);
-    });
-    
-
-    //Erase And Clear Board Button
-    const eraseBtn = document.querySelector('#erase-btn');
-    const clearBtn = document.querySelector('#clear-btn');
-
-    eraseBtn.addEventListener('click', ()=>{
-
-    });
-    clearBtn.addEventListener('click',()=>{
-        createBoard(slider.value,board);
     });
 }); 
 
